@@ -22,10 +22,10 @@
 //                   | BSPC | SPACE | RPT |   | RPT | SPACE | BSPC |
                         display-name = "BASE";
                         bindings = <
-   &kp A  &kp A  &kp A  &kp A  &kp A  &kp A    &kp A   &kp A   &kp A  &kp A  &kp A  &kp A
-   &kp A  &kp A  &kp A  &kp A  &kp A  &kp A    &kp A   &kp A   &kp A  &kp A  &kp A  &kp A
-   &kp A  &kp A  &kp A  &kp A  &kp A  &kp A    &kp A   &kp A   &kp A  &kp A  &kp A  &kp A
-                        &kp A  &kp A  &kp A    &kp A   &kp A   &kp A
+   &kp ESC  &kp Q  &kp W  &kp F   &kp P   &kp B     &kp J    &kp L    &kp U      &kp Y    &kp SQT   &kp SEMI
+   &kp TAB  &kp A  &kp R  &kp S   &kp T   &kp G     &kp M    &kp N    &kp E      &kp I    &kp O     &kp MINUS
+   &kp RET  &kp Z  &kp X  &kp C   &kp D   &kp V     &kp K    &kp H    &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+                          &kp N1  &kp N2  &kp N3    &kp N4   &kp N5   &kp N6
                         >;
                 };
         };

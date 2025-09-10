@@ -36,6 +36,14 @@
                     hold-trigger-key-positions = <12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>; // List of keys on the left side of the keyboard
                     hold-trigger-on-release;
                 };
+                lt_repeat: lt_repeat {
+                    compatible = "zmk,behavior-hold-tap";
+                    label = "LT_REPEAT";
+                    #binding-cells = <2>;
+                    tapping-term-ms = <200>;
+                    flavor = "tap-preferred";
+                    bindings = <&mo>, <&key_repeat>;
+                };
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -48,10 +56,10 @@
 //                   |  N1 |  N2 |  N3 |   |  N4 |  N5 |  N6 |
                         display-name = "BASE";
                         bindings = <
-   &kp ESC   &kp Q          &kp W         &kp F         &kp P          &kp B              &kp J        &kp L          &kp U         &kp Y         &kp SQT        &kp MINUS
-   &kp TAB   &hml LCTRL A   &hml LALT R   &hml LGUI S   &hml LSHFT T   &kp G              &kp M        &hmr RSHFT N   &hmr RGUI E   &hmr RALT I   &hmr RCTRL O   &caps_word
-   &kp RET   &kp Z          &kp X         &kp C         &kp D          &kp V              &kp K        &kp H          &kp COMMA     &kp DOT       &kp FSLH       &kp RET
-                                          &kp BSPC      &kp SPACE      &key_repeat        &key_repeat  &kp SPACE      &kp BSPC
+   &kp ESC   &kp Q          &kp W         &kp F         &kp P          &kp B                 &kp J           &kp L          &kp U         &kp Y         &kp SQT        &kp MINUS
+   &kp TAB   &hml LCTRL A   &hml LALT R   &hml LGUI S   &hml LSHFT T   &kp G                 &kp M           &hmr RSHFT N   &hmr RGUI E   &hmr RALT I   &hmr RCTRL O   &caps_word
+   &kp RET   &kp Z          &kp X         &kp C         &kp D          &kp V                 &kp K           &kp H          &kp COMMA     &kp DOT       &kp FSLH       &kp RET
+                                          &kp BSPC      &lt 3 SPACE    &lt_repeat 1 0        &lt_repeat 2 0  &lt 4 SPACE    &kp BSPC
                         >;
                 };
                 Layer_1 {

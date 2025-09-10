@@ -56,10 +56,10 @@
                 };
                 Layer_1 {
 // -----------------------------------------------------------------------------------------
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-//                |    |    |    |        |    |    |    |
+// |    | UNDO         | CUT          | COPY         | PASTE          |    |        |    |    |    |    |    |    |
+// |    | L ARROW      | D ARROW      | U ARROW      | R ARROW        |    |        |    |    |    |    |    |    |
+// |    | OPT(L ARROW) | OPT(D ARROW) | OPT(U ARROW) | OPT(R ARROW)   |    |        |    |    |    |    |    |    |
+//                                    |              |                |    |        |    |    |    |
                         display-name = "L NAV";
                         bindings = <
    &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -70,10 +70,10 @@
                 };
                 Layer_2 {
 // -----------------------------------------------------------------------------------------
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-//                |    |    |    |        |    |    |    |
+// |    |    |    |    |    |    |        |    | BOLD         | ITAL         | UNDERLINE    | HIGHLIGHT    |    |
+// |    |    |    |    |    |    |        |    | L ARROW      | D ARROW      | U ARROW      | R ARROW      |    |
+// |    |    |    |    |    |    |        |    | CMD(L ARROW) | CMD(D ARROW) | CMD(U ARROW) | CMD(R ARROW) |    |
+//                     |    |    |        |    |              |              |
                         display-name = "R NAV";
                         bindings = <
    &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -84,10 +84,10 @@
                 };
                 Layer_3 {
 // -----------------------------------------------------------------------------------------
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-//                |    |    |    |        |    |    |    |
+// |   | 7 | 8 | 9 | 0 | % |        |    |    |    |    |    |    |
+// |   | 4 | 5 | 6 | ( | ) |        |    |    |    |    |    |    |
+// |   | 1 | 2 | 3 | . | , |        |    |    |    |    |    |    |
+//             |   |   |   |        |    |    |    |
                         display-name = "L NUM";
                         bindings = <
    &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -98,10 +98,10 @@
                 };
                 Layer_4 {
 // -----------------------------------------------------------------------------------------
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-//                |    |    |    |        |    |    |    |
+// |    |    |    |    |    |    |        | { | } | ` | * | & | \ |
+// |    |    |    |    |    |    |        | [ | ] | ^ | % | $ |   |
+// |    |    |    |    |    |    |        | < | > | # | @ | ! |   |
+//                |    |    |    |        |   |   |   |
                         display-name = "R SYM";
                         bindings = <
    &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -112,10 +112,10 @@
                 };
                 Layer_5 {
 // -----------------------------------------------------------------------------------------
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-// |    |    |    |    |    |    |        |    |    |    |    |    |    |
-//                |    |    |    |        |    |    |    |
+// |    |         |         |         |         |    |        |    |    |    |    |    |    |
+// |    | L MOUSE | D MOUSE | U MOUSE | R MOUSE |    |        |    |    |    |    |    |    |
+// |    |         |         |         |         |    |        |    |    |    |    |    |    |
+//                |         |         |         |    |        |    |    |
                         display-name = "MOUSE";
                         bindings = <
    &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans

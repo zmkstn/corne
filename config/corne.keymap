@@ -59,7 +59,7 @@
    &kp ESC   &kp Q          &kp W         &kp F         &kp P          &kp B                 &kp J           &kp L          &kp U         &kp Y         &kp SQT        &kp MINUS
    &kp TAB   &hml LCTRL A   &hml LALT R   &hml LGUI S   &hml LSHFT T   &kp G                 &kp M           &hmr RSHFT N   &hmr RGUI E   &hmr RALT I   &hmr RCTRL O   &caps_word
    &kp RET   &kp Z          &kp X         &kp C         &kp D          &kp V                 &kp K           &kp H          &kp COMMA     &kp DOT       &kp FSLH       &kp RET
-                                          &kp BSPC      &lt 3 SPACE    &lt_repeat 1 0        &lt_repeat 2 0  &lt 4 SPACE    &kp BSPC
+                                          &lt 5 BSPC      &lt 3 SPACE    &lt_repeat 1 0        &lt_repeat 2 0  &lt 4 SPACE    &lt 5 BSPC
                         >;
                 };
                 Layer_1 {
@@ -126,10 +126,10 @@
 //                |         |         |         |    |        |    |    |
                         display-name = "MOUSE";
                         bindings = <
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans  &trans    &trans  &trans  &trans
+   &trans  &trans           &trans          &trans        &trans           &trans          &trans         &trans           &trans        &trans          &trans          &trans
+   &trans  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans          &trans         &msc SCRL_RIGHT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_LEFT  &trans
+   &trans  &kp LC(LS(TAB))  &kp LG(LBKT)    &kp LG(RBKT)  &kp LC(TAB)      &trans          &trans         &kp LC(LEFT)     &kp LC(DOWN)  &kp LC(UP)      &kp LC(RIGHT)   &trans
+                                            &trans        &mkp LCLK        &mkp RCLK       &kp LG(MINUS)  &kp LG(EQUAL)    &trans
                         >;
                 };
         };

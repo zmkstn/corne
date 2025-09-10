@@ -62,10 +62,10 @@
 //                                    |              |                |    |        |    |    |    |
                         display-name = "L NAV";
                         bindings = <
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans  &trans    &trans  &trans  &trans
+   &trans  &kp LG(Z)     &kp LG(X)     &kp LG(C)   &kp LG(V)      &trans        &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT      &trans        &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                                       &trans      &trans         &trans        &trans  &trans  &trans
                         >;
                 };
                 Layer_2 {
@@ -76,10 +76,10 @@
 //                     |    |    |        |    |              |              |
                         display-name = "R NAV";
                         bindings = <
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans  &trans    &trans  &trans  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RG(B)     &kp RG(I)     &kp RG(U)   &kp RG(H)      &trans
+   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT      &trans
+   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RG(LEFT)  &kp RG(DOWN)  &kp RG(UP)  &kp RG(RIGHT)  &trans
+                           &trans  &trans  &trans    &trans  &trans        &trans
                         >;
                 };
                 Layer_3 {

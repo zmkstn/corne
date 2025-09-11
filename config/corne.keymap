@@ -14,7 +14,7 @@
 
 / {
         behaviors {
-                mt: mod_tap {
+                ht: hold_tap {
                     compatible = "zmk,behavior-hold-tap";
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
@@ -65,9 +65,9 @@
                         display-name = "BASE";
                         bindings = <
    &kp ESC                     &kp Q          &kp W         &kp F         &kp P          &kp B                 &kp J           &kp L          &kp U         &kp Y         &kp SQT        &kp MINUS
-   &mt LC(LA(LG(LSHFT))) TAB   &hml LCTRL A   &hml LALT R   &hml LGUI S   &hml LSHFT T   &kp G                 &kp M           &hmr RSHFT N   &hmr RGUI E   &hmr RALT I   &hmr RCTRL O   &caps_word
+   &ht LC(LA(LG(LSHFT))) TAB   &hml LCTRL A   &hml LALT R   &hml LGUI S   &hml LSHFT T   &kp G                 &kp M           &hmr RSHFT N   &hmr RGUI E   &hmr RALT I   &hmr RCTRL O   &caps_word
    &kp RET                     &kp Z          &kp X         &kp C         &kp D          &kp V                 &kp K           &kp H          &kp COMMA     &kp DOT       &kp FSLH       &kp RET
-                                          &lt 5 BSPC    &lt 3 SPACE    &lt_repeat 1 0        &lt_repeat 2 0  &lt 4 SPACE    &lt 5 BSPC
+                                                            &lt 5 BSPC    &lt 3 SPACE    &lt_repeat 1 0        &lt_repeat 2 0  &lt 4 SPACE    &lt 5 BSPC
                         >;
                 };
                 Layer_1 {
@@ -78,10 +78,10 @@
 //                                    |              |                |    |        |    |    |    |
                         display-name = "L NAV";
                         bindings = <
-   &trans  &kp LG(Z)     &kp LG(X)     &kp LG(C)   &kp LG(V)      &trans        &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT      &trans        &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  &trans        &trans  &trans  &trans  &trans  &trans  &trans
-                                       &trans      &trans         &trans        &trans  &trans  &trans
+   &trans  &ht LG(LS(Z)) LG(Z)  &ht LG(LS(X)) LG(X)  &ht LG(LS(C)) LG(C)  &ht LG(LS(V)) LG(V)  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &kp LEFT             &kp DOWN             &kp UP               &kp RIGHT            &trans        &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &kp LA(LEFT)         &kp LA(DOWN)         &kp LA(UP)           &kp LA(RIGHT)        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                                                     &trans               &trans               &trans        &trans  &trans  &trans
                         >;
                 };
                 Layer_2 {
@@ -92,9 +92,9 @@
 //                     |    |    |        |    |              |              |
                         display-name = "R NAV";
                         bindings = <
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RG(B)     &kp RG(I)     &kp RG(U)   &kp RG(H)      &trans
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT      &trans
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RG(LEFT)  &kp RG(DOWN)  &kp RG(UP)  &kp RG(RIGHT)  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &ht RG(RS(B)) RG(B)  &ht RG(RS(I)) RG(I)  &ht RG(RS(U)) RG(U)  &ht RG(RS(H)) RG(H)  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT             &kp DOWN             &kp UP               &kp RIGHT            &trans
+   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RG(LEFT)         &kp RG(DOWN)         &kp RG(UP)           &kp RG(RIGHT)        &trans
                            &trans  &trans  &trans    &trans  &trans        &trans
                         >;
                 };

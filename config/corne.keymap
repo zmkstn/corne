@@ -72,6 +72,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
+    combos {
+        compatible = "zmk,combos";
+        combo_dot {
+            timeout-ms = <50>;
+            key-positions = <LH1 RH1>;
+            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
         layer_0 {

@@ -62,23 +62,14 @@
 #define RH1 40
 #define RH2 41
 
-#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left hand
-#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right hand
-#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumbs
+#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4 LB5  // left hand
+#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RB5  // right hand
+#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                          // thumbs
 
 #define LH LC(LA(LG(LSHFT)))
 #define RH RC(RA(RG(RSHFT)))
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_dot {
-            timeout-ms = <75>;
-            key-positions = <LH1 RH1>;
-            layers = <0>;
-            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
-        };
-    };
     behaviors {
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
@@ -150,6 +141,31 @@
             bindings = <&kp BSPC>, <&kp DEL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        ht_bspc: hold_tap_backspace {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&fdel>;
+        };
+        dss: dot_space_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &kp DOT
+                &kp SPACE
+                &sk LSHFT
+            >;
+        };
+    };
+    combos {
+        compatible = "zmk,combos";
+        combo_dot {
+            timeout-ms = <75>;
+            key-positions = <LH1 RH1>;
+            layers = <0>;
+            bindings = <&dsp>;
+        };
     };
     keymap {
         compatible = "zmk,keymap";
@@ -163,7 +179,7 @@
             //├────────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼─────────────────┤  ├─────────────────┼─────────────────┼─────────────────┼────────────────┼────────────────┼────────────────┤
                 &kp RET          &kp Z            &kp X            &kp C             &kp D             &kp V                &kp K             &kp H             &ht SEMI COMMA    &ht COLON DOT    &ht QMARK FSLH   &kp RET
             //╰────────────────┴────────────────┴────────────────┴─────────────────┴─────────────────┴─────────────────┤  ├─────────────────┴─────────────────┴─────────────────┴────────────────┴────────────────┴────────────────╯
-                                                                   &ltr 5 0          &lt 3 SPACE       &lt 1 BSPC           &lt 2 BSPC        &lt 4 SPACE       &ltr 6 0
+                                                                   &ltr 5 0          &lt 3 SPACE       &ht_bspc 1 0         &ht_bspc 2 0      &lt 4 SPACE       &ltr 6 0
             //                                                   ╰─────────────────┴─────────────────┴─────────────────╯  ╰─────────────────┴─────────────────┴─────────────────╯
             >;
         };

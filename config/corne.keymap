@@ -164,7 +164,7 @@
             timeout-ms = <75>;
             key-positions = <LH1 RH1>;
             layers = <0>;
-            bindings = <&dsp>;
+            bindings = <&dss>;
         };
     };
     keymap {

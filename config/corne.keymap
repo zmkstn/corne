@@ -4,15 +4,20 @@
  * SPDX-License-Identifier: MIT
  */
 
+// System files
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+// Custom files
 #include "c-matrix.dtsi"
 #include "c-behaviors.dtsi"
 #include "c-macros.dtsi"
 #include "c-combos.dtsi"
 #include "c-mouse.dtsi"
+
+// Modifier combinations
+#define LSG(key) LS(LG(key))
 
 / {
     keymap {
@@ -35,7 +40,7 @@
             display-name = "LNAV";
             bindings = <
             //╭──────────────────────────┬──────────────────────────┬───────────────────────────┬───────────────────────────┬───────────────────────────┬──────────────────────────╮  ╭───────┬───────┬───────┬───────┬───────┬───────╮
-                &trans                    &http LS(LG(Z)) LG(Z)       &http LS(LG(X)) LG(X)       &http LS(LG(C)) LG(C)       &http LS(LG(V)) LG(V)         &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+                &trans                    &http LSG(Z) LG(Z)       &http LS(LG(X)) LG(X)       &http LS(LG(C)) LG(C)       &http LS(LG(V)) LG(V)         &trans                        &trans  &trans  &trans  &trans  &trans  &trans
             //├──────────────────────────┼──────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼──────────────────────────┤  ├───────┼───────┼───────┼───────┼───────┼───────┤
                 &trans                    &kp LEFT                    &kp DOWN                    &kp UP                      &kp RIGHT                     &trans                        &trans  &trans  &trans  &trans  &trans  &trans
             //├──────────────────────────┼──────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼──────────────────────────┤  ├───────┼───────┼───────┼───────┼───────┼───────┤

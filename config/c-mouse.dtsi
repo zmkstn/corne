@@ -14,7 +14,7 @@
   delay-ms = <0>;                       // 0
 };
 
-&msc {f
+&msc {
   acceleration-exponent = <1>;          // 0
   time-to-max-speed-ms = <500>;         // 300
   delay-ms = <0>;                       // 0

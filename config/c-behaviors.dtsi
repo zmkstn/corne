@@ -1,5 +1,23 @@
 / {
     behaviors {
+        // Default behaviors
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+        lt: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
+            display-name = "Layer-Tap";
+        };
+
+        // Homerow modifiers
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -26,12 +44,11 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <0>;         // Let shift trigger without waiting
-            tapping-term-ms = <200>;             // Slightly shorter window
+            require-prior-idle-ms = <0>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
-            // Notice: we do NOT use hold-trigger-on-release for Shift
         };
         hmrs: home_row_mod_right_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -43,20 +60,8 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
         };
-        http: hold_tap_tap_preferred {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
-        };
-        hthp: hold_tap_hold_preferred {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
-        };
+
+        // Custom hold taps
         ltr: lt_repeat {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -71,25 +76,21 @@
             tapping-term-ms = <200>;
             bindings = <&kp>, <&caps_word>;
         };
-        fdel: forward_delete {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BSPC>, <&kp DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        ht_bspc: hold_tap_backspace {
+        htb: hold_tap_backspace {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&fdel>;
         };
-        mo_tog: momentary_toggle, {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&tog>;
+
+        // Custom mod morphs
+        fdel: forward_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
     };
 };

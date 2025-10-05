@@ -20,6 +20,17 @@
   delay-ms = <100>;                       // 0
 };
 
+&mmv_input_listener {
+    warp {
+        layers = <7>;
+        input-processors = <&zip_xy_scaler 3 1>;
+    };
+//  precision {
+//      layers = <7>;
+//      input-processors = <&zip_xy_scaler 1 2>;
+//  };
+};
+
 / {
   zip_scroll_scaler: zip_scroll_scaler {
     compatible = "zmk,input-processor-scaler";
@@ -28,6 +39,17 @@
     codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
     track-remainders;
   };
+};
+
+&msc_input_listener {
+    warp {
+        layers = <7>;
+        input-processors = <&zip_scroll_scaler 2 1>;
+    };
+//  precision {
+//      layers = <7>;
+//      input-processors = <&zip_scroll_scaler 1 2>;
+//  };
 };
 
 #define MMU &mmv MOVE_UP

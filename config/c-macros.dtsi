@@ -2,8 +2,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <LNAV RNAV>;
-            then-layer = <MOUSE>;
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };

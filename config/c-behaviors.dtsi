@@ -49,12 +49,5 @@
             tapping-term-ms = <200>;
             bindings = <&kp>, <&key_repeat>;
         };
-        mht: mouse_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&mkp>;
-        };
     };
 };

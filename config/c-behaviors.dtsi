@@ -40,56 +40,14 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-        hmls: home_row_mod_left_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <0>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-        };
-        hmrs: home_row_mod_right_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <0>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
-        };
 
         // Custom hold taps
-        ltr: lt_repeat {
+        sr: shift_repeat {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&key_repeat>;
+            bindings = <&kp>, <&key_repeat>;
         };
-        caps: caps {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&caps_word>;
-        };
-        htb: hold_tap_backspace {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&kp>;
-        };
-
-        // Custom mod morphs
-        // fdel: forward_delete {
-        //    compatible = "zmk,behavior-mod-morph";
-        //    #binding-cells = <0>;
-        //    bindings = <&kp BSPC>, <&kp DEL>;
-        //    mods = <(MOD_LSFT|MOD_RSFT)>;
-        // };
     };
 };

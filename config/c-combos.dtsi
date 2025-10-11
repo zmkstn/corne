@@ -3,9 +3,9 @@
         compatible = "zmk,combos";
         combo_dot {
             timeout-ms = <75>;
-            key-positions = <LH1 RH1>;
+            key-positions = <LH0 RH0>;
             layers = <0>;
-            bindings = <&dss>;
+            bindings = <&caps_word>;
         };
     };
 };

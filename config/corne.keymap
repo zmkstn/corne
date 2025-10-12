@@ -23,6 +23,7 @@
 #define RCA(key) RC(RA(key))
 #define RSG(key) RS(LG(key))
 #define LSG(key) LS(LG(key))
+#define LSC(key) LS(LC(key))
 
 // Layer defines
 #define BASE 0

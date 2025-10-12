@@ -42,12 +42,12 @@
         };
 
         // Custom hold taps
-        sr: shift_repeat {
+        ltr: layer_tap_repeat {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&key_repeat>;
+            bindings = <&mo>, <&key_repeat>;
         };
     };
 };

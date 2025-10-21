@@ -76,12 +76,19 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&mkp>;
         };
-        btc: bluetooth_clear {
+        caps: caps_word {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&caps_word>;
+        };
+        btc: bluetooth_cycle {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <5000>;
-            bindings = <&bt>, <&none>;
+            bindings = <&bt>, <&bt>;
         };
     };
 };

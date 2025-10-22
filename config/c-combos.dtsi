@@ -1,11 +1,17 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_dot {
+        fdl {
+            timeout-ms = <75>;
+            key-positions = <LH0 RH0>;
+            layers = <0>;
+            bindings = <&kp DEL>;
+        };
+        hrc {
             timeout-ms = <75>;
             key-positions = <LH1 RH1>;
             layers = <0>;
-            bindings = <&dss>;
+            bindings = <&kp LG(N6)>;
         };
         btn {
             timeout-ms = <75>;

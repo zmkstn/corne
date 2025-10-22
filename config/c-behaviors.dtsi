@@ -86,9 +86,9 @@
         btc: bluetooth_cycle {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             tapping-term-ms = <5000>;
-            bindings = <&bt BT_CLR>, <&bt BT_NXT>;
+            bindings = <&bt>, <&none>;
         };
     };
 };

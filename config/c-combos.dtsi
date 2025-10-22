@@ -7,5 +7,11 @@
             layers = <0>;
             bindings = <&dss>;
         };
+        btn {
+            timeout-ms = <75>;
+            key-positions = <LH2 RH2>;
+            layers = <0>;
+            bindings = <&bt BT_NXT>;
+        };
     };
 };

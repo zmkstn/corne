@@ -71,6 +71,13 @@
             tapping-term-ms = <5000>;
             bindings = <&bt>, <&none>;
         };
+        bth: bluetooth_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&bt>, <&tog>;
+        };
         skh: sticky_key_hold {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;

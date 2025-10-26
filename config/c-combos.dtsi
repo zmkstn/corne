@@ -7,18 +7,17 @@
             layers = <0>;
             bindings = <&kp DEL>;
         };
-        cc {
+        sks {
             timeout-ms = <75>;
             key-positions = <LH1 RH1>;
             layers = <0>;
-            bindings = <&kp LS(LG(N6))>;
+            bindings = <&skh LSHFT LSHFT>;
             slow-release;
         };
-        btn {
+        mtog {
             timeout-ms = <75>;
             key-positions = <LH2 RH2>;
-            layers = <0>;
-            bindings = <&bth 0 BT_NXT>;
+            bindings = <&tog MSE>;
         };
     };
 };

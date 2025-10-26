@@ -87,8 +87,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <5000>;
-            bindings = <mbt>, <&bt BT_NXT>;
+            tapping-term-ms = <200>;
+            bindings = <&mbt 0>, <&bt BT_NXT>;
         };
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";

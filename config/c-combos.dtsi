@@ -7,11 +7,11 @@
             layers = <0>;
             bindings = <&kp DEL>;
         };
-        sks {
+        skc {
             timeout-ms = <75>;
             key-positions = <LH1 RH1>;
             layers = <0>;
-            bindings = <&skh LSHFT LSHFT>;
+            bindings = <&skh LSHFT 0>;
             slow-release;
         };
         mtog {

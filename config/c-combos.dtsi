@@ -11,14 +11,14 @@
             timeout-ms = <75>;
             key-positions = <LH1 RH1>;
             layers = <0>;
-            bindings = <&caps_word>;
+            bindings = <&kp LS(LG(N6))>;
             slow-release;
         };
         btn {
             timeout-ms = <75>;
             key-positions = <LH2 RH2>;
             layers = <0>;
-            bindings = <&bt BT_NXT>;
+            bindings = <&bth 0 0>;
         };
     };
 };

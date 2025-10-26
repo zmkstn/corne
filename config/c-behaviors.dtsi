@@ -40,26 +40,26 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-        hmls: home_row_mod_left_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <0>;
-            tapping-term-ms = <175>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-        };
-        hmrs: home_row_mod_right_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <0>;
-            tapping-term-ms = <175>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
-        };
+        // hmls: home_row_mod_left_shift {
+        //    compatible = "zmk,behavior-hold-tap";
+        //    #binding-cells = <2>;
+        //    flavor = "balanced";
+        //    require-prior-idle-ms = <0>;
+        //    tapping-term-ms = <175>;
+        //    quick-tap-ms = <175>;
+        //    bindings = <&kp>, <&kp>;
+        //    hold-trigger-key-positions = <KEYS_R THUMBS>;
+        // };
+        // hmrs: home_row_mod_right_shift {
+        //    compatible = "zmk,behavior-hold-tap";
+        //    #binding-cells = <2>;
+        //    flavor = "balanced";
+        //    require-prior-idle-ms = <0>;
+        //    tapping-term-ms = <175>;
+        //    quick-tap-ms = <175>;
+        //    bindings = <&kp>, <&kp>;
+        //    hold-trigger-key-positions = <KEYS_L THUMBS>;
+        // };
 
         // Custom hold taps
         ltr: layer_tap_repeat {
@@ -76,19 +76,34 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&mkp>;
         };
-        caps: caps {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&caps_word>;
-        };
         btc: bluetooth_clear {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <5000>;
             bindings = <&bt>, <&none>;
+        };
+        bth: bluetooth_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <5000>;
+            bindings = <&mbt>, <&bt BT_NXT>;
+        };
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1000>;
+            quick-release;
+            ignore-modifiers;
+        };
+        skc: sticky_key_caps {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&caps_word>, <&skq>;
         };
     };
 };

@@ -7,11 +7,12 @@
             layers = <0>;
             bindings = <&kp DEL>;
         };
-        hrc {
+        cap {
             timeout-ms = <75>;
             key-positions = <LH1 RH1>;
             layers = <0>;
-            bindings = <&kp LG(LS(N6))>;
+            bindings = <&caps_word>;
+            slow-release;
         };
         btn {
             timeout-ms = <75>;

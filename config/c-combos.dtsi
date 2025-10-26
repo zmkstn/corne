@@ -7,7 +7,7 @@
             layers = <0>;
             bindings = <&kp DEL>;
         };
-        cap {
+        cc {
             timeout-ms = <75>;
             key-positions = <LH1 RH1>;
             layers = <0>;

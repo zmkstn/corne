@@ -17,7 +17,7 @@
         mtog {
             timeout-ms = <75>;
             key-positions = <LH2 RH2>;
-            bindings = <&kp RS(RG(N0))>;
+            bindings = <&bt BT_NXT>;
         };
     };
 };

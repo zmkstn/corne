@@ -11,13 +11,13 @@
             timeout-ms = <75>;
             key-positions = <LH1 RH1>;
             layers = <0>;
-            bindings = <&skc LSHFT 0>;
+            bindings = <&kp RS(RG(N0))>;
             slow-release;
         };
         mtog {
             timeout-ms = <75>;
             key-positions = <LH2 RH2>;
-            bindings = <&bt BT_NXT>;
+            bindings = <&skc LSHFT 0>;
         };
     };
 };

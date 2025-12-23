@@ -22,7 +22,7 @@
 
 &mmv_input_listener {
     precision {
-        layers = <2>;
+        layers = <3>;
         input-processors = <&zip_xy_scaler 1 2>;
     };
 };
@@ -39,7 +39,7 @@
 
 &msc_input_listener {
     precision {
-        layers = <2>;
+        layers = <3>;
         input-processors = <&zip_scroll_scaler 1 2>;
     };
 };

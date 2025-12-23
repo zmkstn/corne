@@ -1,20 +1,20 @@
 / {
     combos {
         compatible = "zmk,combos";
-        fdl {
+        T0 {
             timeout-ms = <75>;
             key-positions = <LH0 RH0>;
             layers = <0>;
             bindings = <&kp DEL>;
         };
-        skh {
+        T1 {
             timeout-ms = <75>;
             key-positions = <LH1 RH1>;
             layers = <0>;
             bindings = <&kp RS(RG(N0))>;
             slow-release;
         };
-        mtog {
+        T2 {
             timeout-ms = <75>;
             key-positions = <LH2 RH2>;
             bindings = <&skc LSHFT 0>;

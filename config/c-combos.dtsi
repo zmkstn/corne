@@ -17,7 +17,7 @@
         T2 {
             timeout-ms = <75>;
             key-positions = <LH2 RH2>;
-            bindings = <&kp RG(SPACE)>;
+            bindings = <&tog 6>;
         };
     };
 };

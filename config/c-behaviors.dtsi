@@ -104,12 +104,5 @@
             tapping-term-ms = <175>;
             bindings = <&mo>, <&sl>;
         };
-        hth: ht_hold_preferred {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <175>;
-            bindings = <&kp>, <&kp>;
-        };
     };
 };

@@ -90,13 +90,6 @@
             tapping-term-ms = <175>;
             bindings = <&bt>, <&kp>;
         };
-        htc: ht_caps_word {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <175>;
-            bindings = <&kp>, <&caps_word>;
-        };
         hsl: ht_sticky_layer {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;

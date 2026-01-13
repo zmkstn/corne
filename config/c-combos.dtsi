@@ -24,12 +24,14 @@
             key-positions = <LM4 LM3>;
             bindings = <&kp LPAR>;
             layers = <0 1 4>;
+            require-prior-idle-ms = <75>;
         };
         LM2 {
             timeout-ms = <75>;
             key-positions = <LM2 LM1>;
             bindings = <&kp RPAR>;
             layers = <0 1 4>;
+            require-prior-idle-ms = <75>;
         };
     };
 };

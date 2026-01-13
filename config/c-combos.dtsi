@@ -19,5 +19,15 @@
             key-positions = <LH2 RH2>;
             bindings = <&tog 6>;
         };
+        LM1 {
+            timeout-ms = <75>;
+            key-positions = <LM4 LM3>;
+            bindings = <&kp LPAR>;
+        };
+        LM2 {
+            timeout-ms = <75>;
+            key-positions = <LM2 LM1>;
+            bindings = <&kp RPAR>;
+        };
     };
 };

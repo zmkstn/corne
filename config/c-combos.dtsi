@@ -4,13 +4,13 @@
         T0 {
             timeout-ms = <75>;
             key-positions = <LH0 RH0>;
-            layers = <0>;
+            layers = <0 1 4>;
             bindings = <&kp DEL>;
         };
         T1 {
             timeout-ms = <75>;
             key-positions = <LH1 RH1>;
-            layers = <0>;
+            layers = <0 1 4>;
             bindings = <&caps_word>;
             slow-release;
         };
@@ -23,11 +23,13 @@
             timeout-ms = <75>;
             key-positions = <LM4 LM3>;
             bindings = <&kp LPAR>;
+            layers = <0 1 4>;
         };
         LM2 {
             timeout-ms = <75>;
             key-positions = <LM2 LM1>;
             bindings = <&kp RPAR>;
+            layers = <0 1 4>;
         };
     };
 };

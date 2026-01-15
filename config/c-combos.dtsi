@@ -25,6 +25,8 @@
             bindings = <&kp LPAR>;
             layers = <0 1 4>;
             require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
         };
         LM2 {
             timeout-ms = <75>;
@@ -32,6 +34,8 @@
             bindings = <&kp RPAR>;
             layers = <0 1 4>;
             require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
         };
     };
 };

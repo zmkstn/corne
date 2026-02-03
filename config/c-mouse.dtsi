@@ -23,6 +23,7 @@
 &mmv_input_listener {
     precision {
         modifiers = <(MOD_LSFT|MOD_RSFT)>;
+        layers = <LMSE RMSE CMSE>;
         input-processors = <&zip_xy_scaler 1 2>;
     };
 };
@@ -40,6 +41,7 @@
 &msc_input_listener {
     precision {
         modifiers = <(MOD_LSFT|MOD_RSFT)>;
+        layers = <LMSE RMSE CMSE>;
         input-processors = <&zip_scroll_scaler 1 2>;
     };
 };

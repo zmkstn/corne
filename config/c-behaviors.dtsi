@@ -83,11 +83,4 @@
             bindings = <&mo>, <&sl>;
         };
     };
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <LMSE RMSE>;
-            then-layer = <CMSE>;
-        };
-    };
 };

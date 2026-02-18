@@ -70,10 +70,7 @@
 #define RSA(key) RS(RA(key))
 #define RAG(key) RA(RG(key))
 #define RCA(key) RC(RA(key))
-
 #define RSA(key) RS(RA(key))
-
-
 #define LSC(key) LS(LC(key))
 
 // Layer defines

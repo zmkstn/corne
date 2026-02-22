@@ -79,6 +79,7 @@
 #define SYM   2
 #define LMSE  3
 #define RMSE  4
-#define NAV   5
-#define GAME  6
-#define SYS   7
+#define LNAV  5
+#define RNAV  6
+#define GAME  7
+#define SYS   8

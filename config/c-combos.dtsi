@@ -4,7 +4,7 @@
         T0 {
             timeout-ms = <75>;
             key-positions = <LH0 RH0>;
-            bindings = <&kp DEL>;
+            bindings = <&bt BT_NXT>;
         };
         T1 {
             timeout-ms = <100>;
@@ -15,7 +15,7 @@
         T2 {
             timeout-ms = <75>;
             key-positions = <LH2 RH2>;
-            bindings = <&tog GAME>;
+            bindings = <&kp LA(BSPC)>;
         };
         LM1 {
             timeout-ms = <50>;

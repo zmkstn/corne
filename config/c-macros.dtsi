@@ -1,4 +1,9 @@
 / {
     macros {
+        bspc2: bspc2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC &kp BSPC>;
+        };
     };
 };

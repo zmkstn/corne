@@ -15,7 +15,7 @@
         T2 {
             timeout-ms = <75>;
             key-positions = <LH2 RH2>;
-            bindings = <&bspc2>;
+            bindings = <&kp LA(BSPC)>;
         };
         LM1 {
             timeout-ms = <50>;
